@@ -2,11 +2,10 @@
 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-<!-- <img src="/home/lenovo/Downloads/ezgif.com-gif-maker.gif" width="200" height="100"/> -->
-
-HI 
 
 ![Alt Text](./readme_writeup/first_track.gif)
+
+<!-- <img src="/home/lenovo/Downloads/ezgif.com-gif-maker.gif" width="200" height="100"/> -->
 
 HI
 
