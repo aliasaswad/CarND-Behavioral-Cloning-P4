@@ -4,9 +4,12 @@
 
 <img src="./readme_writeup/second_track.gif" width="700" height="400" align="center"/>
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
+Overview
+---
+This repository contains the Behavioral Cloning Project.
+
+In this project, I used deep neural networks and convolutional neural networks to clone driving behavior. I trained, validated and tested a model using Keras. The model output a steering angle to an autonomous vehicle.
 
 **Behavioral Cloning Project**
 
