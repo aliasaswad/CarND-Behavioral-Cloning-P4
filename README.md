@@ -5,7 +5,7 @@
 
 <!-- ![Alt Text](./readme_writeup/first_track.gif) -->
 
-<img src="./readme_writeup/first_track.gif" width="150" height="90"/>
+<img src="./readme_writeup/first_track.gif" width="500" height="250"/>
 
 
 Overview
