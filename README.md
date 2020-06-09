@@ -2,6 +2,8 @@
 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
+<img src="/home/lenovo/Downloads/ezgif.com-gif-maker.gif" width="500" height="600"/>
+
 Overview
 ---
 This repository contains starting files for the Behavioral Cloning Project.
