@@ -69,7 +69,7 @@ def create_new(samples, batch_size=32):
             inputs = np.array(images); outputs = np.array(measurements) # Trim the image
             yield sklearn.utils.shuffle(inputs, outputs)
                        
-def leNet():
+def nVidia():
     model = preprocessing_layer()
     model.add(Convolution2D(24,5,5, subsample=(2,2), activation='relu'))
     model.add(Convolution2D(36,5,5, subsample=(2,2), activation='relu'))
@@ -104,7 +104,7 @@ print('Number of Valid. smpls= {}'.format(len(smpl_validation)))
 crt_train  = create_new(smpl_train)
 crt_validation = create_new(smpl_validation)
                         
-model = leNet()
+model = nVidia()
 model.compile(loss='mse', optimizer='adam')
 obj_histo = model.fit_generator(crt_train, samples_per_epoch=len(smpl_train), validation_data=crt_validation, nb_val_samples=len(smpl_validation), nb_epoch=3, verbose=1)
 model.save('model.h5')
