@@ -33,7 +33,7 @@ At the beginning, I worked on [`clone.py`](https://github.com/aliasaswad/CarND-B
 
 ---
 #### 2. Functional code
-Using the Udacity provided [simulator](https://github.com/aliasaswad/Self-Driving-Car-Simulator) and my [`drive.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/drive.py) file, the car can be driven autonomously around the track by executing. I changed the car speed from 9 to 15 by modifing the `set_speed ` variable at code_line 47.  
+Using Udacity provided [simulator](https://github.com/aliasaswad/Self-Driving-Car-Simulator) and my [`drive.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/drive.py) file, the car can be driven autonomously around the track by executing the command below. Within `drive.py` file, I changed the car speed from 9 to 15 by modifing the `set_speed` variable at code_[line 47](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/drive.py#L47).
 ```sh
 python drive.py model.h5
 ```
