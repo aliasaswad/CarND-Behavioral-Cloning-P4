@@ -57,26 +57,25 @@ My first work was using LeNet model, but the dodel didn't able to drive the car 
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. The below table summarize the nVidia model that I used in my project:
 
-| Layer(type)     		|     Output Shape	 |Param #	| 	   Connected to 				| 
-|:---------------------:|:--------------------:|:--------:|:---------------:|
-lambda_1 (Lambda)	|(None, 160, 320, 3)	|0	|lambda_input_2[0][0]|
+| Layer(type)                		|      Output Shape 	|Param #	|  	Connected to	  | 
+|:---------------------------------:|:---------------------:|:---------:|:-------------------:|
+|lambda_1 (Lambda)               	|(None, 160, 320, 3)	|0      	|lambda_input_2[0][0] |
+|cropping2d_1 (Cropping2D)        	|(None, 90, 320, 3)    	|0      	|lambda_1[0][0]       |
+|convolution2d_1 (Convolution2D)  	|(None, 43, 158, 24)   	|1824   	|cropping2d_1[0][0]   |
+|convolution2d_2 (Convolution2D)  	|(None, 20, 77, 36)    	|21636  	|convolution2d_1[0][0]|
+|convolution2d_3 (Convolution2D)  	|(None, 8, 37, 48)     	|43248  	|convolution2d_2[0][0]|
+|convolution2d_4 (Convolution2D)  	|(None, 6, 35, 64)     	|27712  	|convolution2d_3[0][0]|
+|convolution2d_5 (Convolution2D)  	|(None, 4, 33, 64)     	|36928  	|convolution2d_4[0][0]|
+|flatten_1 (Flatten)              	|(None, 8448)          	|0      	|convolution2d_5[0][0]|
+|dense_1 (Dense)                  	|(None, 100)           	|844900 	|flatten_1[0][0]      |
+|dense_2 (Dense)                  	|(None, 50)            	|5050   	|dense_1[0][0]        |
+|dense_3 (Dense)                  	|(None, 10)            	|510    	|dense_2[0][0]        |
+|dense_4 (Dense)                  	|(None, 1)             	|11     	|dense_3[0][0]        |
+`Total params: 981,819`
+`Trainable params: 981,819`
+`Non-trainable params: 0`
 
 
-| Input         		| 32x32x3 RGB image   						| 
-| Convolution 1     	| 1x1 stride, same padding, outputs 28x28x16|
-| RELU					|											|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x64 			|
-| Convolution 2 	    | 1x1 stride, same padding, outputs 10x10x64|
-| RELU					|											|
-| Max pooling	      	| 2x2 stride,  outputs 5x5x64   			|
-| Fatten					|										|
-| Fully-connected 1		| 1600 										|
-| RELU					|											|
-| Dropout					|										|
-| Fully-connected 2		| 240										|
-| RELU					|											|
-| Dropout				|											|
-| Fully connected 3		| 43										|
 
 
 
