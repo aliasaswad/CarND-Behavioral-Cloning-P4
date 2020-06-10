@@ -53,9 +53,32 @@ The model includes RELU layers to introduce nonlinearity (code line 20), and the
 
 #### 2. Attempts to reduce overfitting in the model
 
-My first work was using LeNet model, but the dodel didn't able to drive the car inside the street with three epochs (The model could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L49-L60)). Then, I tried another model which is [nVidia Autonomous Car Group model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/). The nVidia model was able to drive the car and completed the track after just three training epochs (The model could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L62-L75)).
+My first work was using LeNet model, but the dodel didn't able to drive the car inside the street with three epochs (The model in  the `clone.py ` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L49-L60)). Then, I tried another model which is [nVidia Autonomous Car Group model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/). The nVidia model was able to drive the car and completed the track after just three training epochs (The model in the `clone.py ` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L62-L75)).
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. The below table summarize the nVidia model that I used in my project:
+
+| Layer(type)     		|     Output Shape	 |Param #	| 	   Connected to 				| 
+|:---------------------:|:--------------------:|:--------:|:---------------:|
+lambda_1 (Lambda)	|(None, 160, 320, 3)	|0	|lambda_input_2[0][0]|
+
+
+| Input         		| 32x32x3 RGB image   						| 
+| Convolution 1     	| 1x1 stride, same padding, outputs 28x28x16|
+| RELU					|											|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x64 			|
+| Convolution 2 	    | 1x1 stride, same padding, outputs 10x10x64|
+| RELU					|											|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x64   			|
+| Fatten					|										|
+| Fully-connected 1		| 1600 										|
+| RELU					|											|
+| Dropout					|										|
+| Fully-connected 2		| 240										|
+| RELU					|											|
+| Dropout				|											|
+| Fully connected 3		| 43										|
+
+
 
 #### 3. Model parameter tuning
 
