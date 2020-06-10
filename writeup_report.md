@@ -27,7 +27,7 @@ My project includes the following files:
 * **clone.py** containing the script to test different models
 * **writeup_report.md** : Summarizing the results
 
-At the bigening, I worked on ['clone.py'](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py) file to test two different models and compared loss/valid. loss values. [LeNet](http://yann.lecun.com/exdb/lenet/) model and [nVidia Autonomous](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) were used for that test to create and train model. Also, I visualized my final results using a script in ['visualizer.ipynb'](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/visualizer.ipynb).
+At the bigening, I worked on '[clone.py](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py)' file to test two different models and compared loss/valid. loss values. [LeNet](http://yann.lecun.com/exdb/lenet/) model and [nVidia Autonomous](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) were used for that test to create and train model. Also, I visualized my final results using a script in ['visualizer.ipynb'](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/visualizer.ipynb).
 
 ---
 #### 2. Submission includes functional code
