@@ -24,6 +24,8 @@ My project includes the following files:
 * **drive.py** for driving the car in autonomous mode
 * **model.h5** containing a trained convolution neural network 
 * **visualizer.ipynb** for visuaizing the model
+* **clone.py** containing the script to test different models
+* **writeup_report.md** : Summarizing the results
 
 ---
 #### 2. Submission includes functional code
