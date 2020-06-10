@@ -79,11 +79,11 @@ To reduce overfitting in the model I kept the number of the training epochs low.
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer, so the learning rate was not tuned manually (`model.py` [line 108](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L108)).
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
+Training data was chosen to keep the vehicle driving on the road. I used the [data](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/data) that I got from the [simulator](https://github.com/aliasaswad/Self-Driving-Car-Simulator) for the two tracks to train the model. For each track the simulator provides two type of information. First, [driving_log.csv](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/data/driving_log.csv) that contains the information about the steering angle. Second, three different view camera images ([`IMG`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/data/IMG)): center, left and right. Each one of these image was used to train the model.
 
 For details about how I created the training data, see the next section. 
 
