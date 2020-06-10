@@ -39,9 +39,9 @@ Using Udacity provided [simulator](https://github.com/aliasaswad/Self-Driving-Ca
 python drive.py model.h5
 ```
 
-#### 3. Submission code is usable and readable
+#### 3. Code is usable and readable
 
-The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
+The [`model.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py) file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
 ### Model Architecture and Training Strategy
 
@@ -53,9 +53,9 @@ The model includes RELU layers to introduce nonlinearity (code line 20), and the
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 21). 
+My first work was using LeNet model, but the dodel didn't able to drive the car inside the street with three epochs (The model could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L49-L60)). Then, I tried another model which is [nVidia Autonomous Car Group model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/). The nVidia model was able to drive the car and completed the track after just three training epochs (The model could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L62-L75)).
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
