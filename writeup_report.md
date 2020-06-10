@@ -47,9 +47,9 @@ The [`model.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/
 
 #### 1. An appropriate model architecture has been employed
 
-My first work was using LeNet model, but the model didn't able to drive the car inside the street with three epochs (The model in  the `clone.py ` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L49-L60)). Then, I tried another model which is [nVidia Autonomous Car Group model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/). The nVidia model was able to drive the car and completed the track after just three training epochs. My model consists of five convolution neural networks (`model.py ` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L72-L84)).
+My first work was using LeNet model, but the model didn't able to drive the car inside the street with three epochs (The model in  the `clone.py` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L49-L60)). Then, I tried another model which is [nVidia Autonomous Car Group model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/). The nVidia model was able to drive the car and completed the track after just with three training epochs. My model consists of five convolution neural networks (`model.py` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L72-L84)).
 
-The model includes RELU layers to introduce nonlinearity (code line [74-78](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L74-L78)), and the data is normalized in the model using a Keras lambda layer (code line [88](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L88)).
+The model in `model.py` file includes RELU layers to introduce nonlinearity (code line [74-78](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L74-L78)), and the data is normalized in the model using a Keras lambda layer (code line [88](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L88)).
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. The below table summarize the nVidia model that I used in my project:
 
@@ -75,7 +75,7 @@ Non-trainable params: 0
 
 #### 2. Attempts to reduce overfitting in the model
 
-I decided not to modify the model by applying regularization techniques like Dropout or Max pooling. Instead, I decided to keep the training epochs low: only three epochs. In addition to that, I split my sample data into training and validation data. Using 80% as training and 20% as validation. This can be seen at this part of the code.
+To reduce overfitting in the model I kept the number of the training epochs low. I just used 3 epochs to train the model. I shuffled the sample data and splitted off 20% of the data to use for a validation set and 80% for the train set (`model.py` [line 98](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L98)). I used mean square error loss function to minimize the error between steering measurement that the network predicts and the ground truth steering measurement (`model.py` [line 108](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L108)).
 
 #### 3. Model parameter tuning
 
