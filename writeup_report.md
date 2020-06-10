@@ -73,7 +73,9 @@ The model was trained and validated on different data sets to ensure that the mo
 |dense_4 (Dense)                  	|(None, 1)             	|11     	|dense_3[0][0]        |
 
 `Total params: 981,819`
+
 `Trainable params: 981,819`
+
 `Non-trainable params: 0`
 
 
