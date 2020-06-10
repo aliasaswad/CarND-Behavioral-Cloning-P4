@@ -83,7 +83,7 @@ The model used an adam optimizer, so the learning rate was not tuned manually (`
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used the [data](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/data) that I got from the [simulator](https://github.com/aliasaswad/Self-Driving-Car-Simulator) for the two tracks to train the model. For each track the simulator provides two type of information. First, [driving_log.csv](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/data/driving_log.csv) that contains the information about the steering angle. Second, three different view camera images ([`IMG`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/data/IMG)): center, left and right. Each one of these image was used to train the model.
+Training data was chosen to keep the vehicle driving on the road. I used the [data](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/data) that I got from the [simulator](https://github.com/aliasaswad/Self-Driving-Car-Simulator) for the two tracks to train the model. For each track the simulator provides two type of information. First, [`driving_log.csv`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/data/driving_log.csv) that contains the information about the steering angle. Second, three different view camera images ([`IMG`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/data/IMG)): center, left and right. Each one of these image was used to train the model.
 
 For details about how I created the training data, see the next section. 
 
