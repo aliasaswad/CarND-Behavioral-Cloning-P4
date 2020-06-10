@@ -71,10 +71,11 @@ The model was trained and validated on different data sets to ensure that the mo
 |dense_2 (Dense)                  	|(None, 50)            	|5050   	|dense_1[0][0]        |
 |dense_3 (Dense)                  	|(None, 10)            	|510    	|dense_2[0][0]        |
 |dense_4 (Dense)                  	|(None, 1)             	|11     	|dense_3[0][0]        |
+```sh
 Total params: 981,819
 Trainable params: 981,819
 Non-trainable params: 0
-
+```
 
 
 
