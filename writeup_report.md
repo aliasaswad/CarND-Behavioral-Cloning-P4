@@ -19,6 +19,8 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
+#### 1. All required files used to run the simulator in autonomous mode
+
 My project includes the following files:
 * **model.py** containing the script to create and train the model
 * **drive.py** for driving the car in autonomous mode
@@ -27,11 +29,11 @@ My project includes the following files:
 * **clone.py** containing the script to test different models
 * **writeup_report.md** : Summarizing the results
 
-At the bigening, I worked on [`clone.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py) file to test two different models and compared loss/valid. loss values. [LeNet](http://yann.lecun.com/exdb/lenet/) model and [nVidia Autonomous](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) were used for that test to create and train model. Also, I visualized my final results using a script in [visualizer.ipynb](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/visualizer.ipynb).
+At the beginning, I worked on [`clone.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py) file to test two different models and compared loss/valid. loss values. [LeNet](http://yann.lecun.com/exdb/lenet/) and [nVidia Autonomous](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) models structures were used for that test to create and train model. Also, I visualized my final results using a script in [`visualizer.ipynb`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/visualizer.ipynb).
 
 ---
-#### 2. Submission includes functional code
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
+#### 2. Functional code
+Using the Udacity provided [simulator](https://github.com/aliasaswad/Self-Driving-Car-Simulator) and my [`drive.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/drive.py) file, the car can be driven autonomously around the track by executing. I changed the car speed from 9 to 15 by modifing the `set_speed ` variable at code_line 47.  
 ```sh
 python drive.py model.h5
 ```
