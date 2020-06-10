@@ -47,13 +47,9 @@ The [`model.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
+My first work was using LeNet model, but the model didn't able to drive the car inside the street with three epochs (The model in  the `clone.py ` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L49-L60)). Then, I tried another model which is [nVidia Autonomous Car Group model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/). The nVidia model was able to drive the car and completed the track after just three training epochs. My model consists of five convolution neural networks (`model.py ` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L72-L84)).
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 18). 
-
-#### 2. Attempts to reduce overfitting in the model
-
-My first work was using LeNet model, but the dodel didn't able to drive the car inside the street with three epochs (The model in  the `clone.py ` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L49-L60)). Then, I tried another model which is [nVidia Autonomous Car Group model](https://devblogs.nvidia.com/deep-learning-self-driving-cars/). The nVidia model was able to drive the car and completed the track after just three training epochs (The model in the `clone.py ` could be found [here](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/clone.py#L62-L75)).
+The model includes RELU layers to introduce nonlinearity (code line [74-78](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L74-L78)), and the data is normalized in the model using a Keras lambda layer (code line [88](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L88)).
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. The below table summarize the nVidia model that I used in my project:
 
@@ -71,15 +67,15 @@ The model was trained and validated on different data sets to ensure that the mo
 |dense_2 (Dense)                  	|(None, 50)            	|5050   	|dense_1[0][0]        |
 |dense_3 (Dense)                  	|(None, 10)            	|510    	|dense_2[0][0]        |
 |dense_4 (Dense)                  	|(None, 1)             	|11     	|dense_3[0][0]        |
-|Total params: 981,819|||
 ```sh
 Total params: 981,819
 Trainable params: 981,819
 Non-trainable params: 0
 ```
 
+#### 2. Attempts to reduce overfitting in the model
 
-
+I decided not to modify the model by applying regularization techniques like Dropout or Max pooling. Instead, I decided to keep the training epochs low: only three epochs. In addition to that, I split my sample data into training and validation data. Using 80% as training and 20% as validation. This can be seen at this part of the code.
 
 #### 3. Model parameter tuning
 
