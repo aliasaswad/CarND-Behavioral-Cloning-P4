@@ -96,11 +96,11 @@ The top portion of the image captures trees and hills and sky, and the bottom po
 
 Here is an example of an input image and its cropped version after passing through a Cropping2D layer:
 
-|<img src="./readme_writeup/original_image_from_sim.jpg" width="400" height="200" align="center"/> 
+|<img src="./readme_writeup/original_image_from_sim.jpg" width="500" height="200" align="center"/> 
 |:--:| 
 |*Original Image from Simulator*|
 
-|<img src="./readme_writeup/cropped_image.jpg" width="400" height="150" align="center"/> 
+|<img src="./readme_writeup/cropped_image.jpg" width="500" height="150" align="center"/> 
 |:--:| 
 |*Cropped Image after passing through a Cropping2D Layer*|
 
