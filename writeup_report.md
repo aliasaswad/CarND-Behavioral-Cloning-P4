@@ -128,9 +128,9 @@ Here is a visualization of the final model architecture:
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I collected more data to train the model. First, recorded one lap driving forward on track. I then recorded another lap driving backward. Then I repeated this process on track two in order to get more data points. To augment the data set, I also flipped images and angles thinking that this would help to add more data to train the model. I finally randomly shuffled the data set and put Y% of the data into a validation set. 
+To capture good driving behavior, I collected more [data](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/data) to train the model. First, recorded one lap driving forward on track. I then recorded another lap driving backward. Then I repeated this process on track two in order to get more data points. To augment the data set, I also flipped images and angles thinking that this would help to add more data to train the model. I finally shuffled the data set and put 80% of the data into a validation set. 
 
-I used this training data for training the model with three epochs. The validation set helped determine if the model was over or under fitting. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model with three epochs ([`model.py`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L109)). The validation set helped determine if the model was over or under fitting. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
 The following plot shows the error loss for the trained model:
 
