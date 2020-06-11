@@ -134,11 +134,11 @@ I used this training data for training the model with three epochs. The validati
 
 The following plot shows the error loss for the trained model:
 
-|<img src="./readme_writeup/loss_plot.png" width="500" height="400" align="center"/> 
+|<img src="./readme_writeup/loss_plot.png" width="600" height="400" align="center"/> 
 |:--:| 
 |*Trained Model Loss Error*|
 
-With this trained model architecture, the car was autonomously driven on the road all the time on both the [first](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/output_video/output_video_1track.mp4) and [second](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/output_video) track.
+With this trained model architecture, the car was autonomously driven on the road all the time on both the [first](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/output_video/output_video_1track.mp4) and [second](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/tree/master/output_video/output_video_2track.mp4) track.
 
 
 
