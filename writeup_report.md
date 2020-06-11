@@ -91,7 +91,21 @@ For details about how I created the training data, see the next section.
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
+The overall strategy for deriving a model architecture was to normalize the input images by adding a [lambda](https://keras.io/api/layers/core_layers/) layers can be used to create arbitrary functions that operate on each image as it passes through the layer. The lambda layer (`model.py` [line 88](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L88)) is a convenient way to parallelize image normalization. The lambda layer will also ensure that the model will normalize input images when making predictions in `drive.py`.
+The top portion of the image captures trees and hills and sky, and the bottom portion of the image captures the hood of the car. So, to make the model train faster, I cropped each image and focused on only the portion of the image that is useful for predicting a steering angle. I used [Cropping2D Layer](https://keras.io/api/layers/convolution_layers/) provided by keras for image cropping within the model.
+
+Here is an example of an input image and its cropped version after passing through a Cropping2D layer:
+
+|<img src="./readme_writeup/original_image_from_sim.jpg" width="700" height="400" align="center"/> 
+|:--:| 
+|*Original Image from Simulator*|
+
+|<img src="./readme_writeup/cropped_image.jpg" width="700" height="400" align="center"/> 
+|:--:| 
+|*Cropped Image after passing through a Cropping2D Layer*|
+
+    
+followed cropping layer, five convolution neural network
 
 My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
 
