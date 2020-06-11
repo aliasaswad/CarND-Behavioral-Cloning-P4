@@ -81,7 +81,7 @@ def preprocessing_layer():
     model.add(Cropping2D(cropping=((50,20), (0,0))))
     return model
 
-def simple_model():
+def model():
     model = Sequential()
     model.add(Flatten(input_shape=(160,320,3)))
     model.add(Dense(1))
@@ -96,8 +96,8 @@ def train_and_save(model, xtrain, ytrain, model_name, epochs=2):
 print('Start read data . . .')
 X_train, y_train = get_images_and_measurements('data/')
 print('finish reading data')
-print('Star simple model')
-model = simple_model()
+print('Star model')
+model = model()
 print('Start train and save model . . .')
 train_and_save(model, X_train, y_train, 'models/model.h5')
 print('\n')
