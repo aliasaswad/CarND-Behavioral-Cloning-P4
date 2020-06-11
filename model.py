@@ -69,20 +69,7 @@ def create_new(samples, batch_size=32):
             inputs = np.array(images); outputs = np.array(measurements) # Trim the image
             yield sklearn.utils.shuffle(inputs, outputs)
                        
-def nVidia():
-    model = preprocessing_layer()
-    model.add(Convolution2D(24,5,5, subsample=(2,2), activation='relu'))
-    model.add(Convolution2D(36,5,5, subsample=(2,2), activation='relu'))
-    model.add(Convolution2D(48,5,5, subsample=(2,2), activation='relu'))
-    model.add(Convolution2D(64,3,3, activation='relu'))
-    model.add(Convolution2D(64,3,3, activation='relu'))
-    model.add(Flatten())
-    model.add(Dense(100))
-    model.add(Dense(50))
-    model.add(Dense(10))
-    model.add(Dense(1))
-    return model
-                        
+                 
 def preprocessing_layer():
     model = Sequential()
     model.add(Lambda(lambda x: (x / 255.0) - 0.5, input_shape=(160,320,3)))
@@ -103,13 +90,31 @@ print('Number of Valid. smpls= {}'.format(len(smpl_validation)))
                             
 crt_train  = create_new(smpl_train)
 crt_validation = create_new(smpl_validation)
-                        
+
+print('Star nVidia model\n')               
 model = nVidia()
+print('Star compile\n')
 model.compile(loss='mse', optimizer='adam')
-obj_histo = model.fit_generator(crt_train, samples_per_epoch=len(smpl_train), validation_data=crt_validation, nb_val_samples=len(smpl_validation), nb_epoch=3, verbose=1)
+# obj_histo = model.fit_generator(crt_train, samples_per_epoch=len(smpl_train), validation_data=crt_validation, nb_val_samples=len(smpl_validation), nb_epoch=3, verbose=1)
+obj_histo = model.fit_generator(crt_train, steps_per_epoch=len(smpl_train), validation_data=crt_validation, validation_steps=len(smpl_validation), nb_epoch=3, verbose=1)
+print('Saving the model ....\n')
 model.save('model.h5')
+print('Model saved')
 print(obj_histo.history.keys())
 print(obj_histo.history['loss']) #Loss
-print(obj_histo.history['val_loss']) #Valid. Loss
+print(obj_histo.history['val_loss']) #Validation_loss
 
+
+# Epoch 1/3
+# [==============================] - loss: 0.0323 - val_loss: 0.0247
+# Epoch 2/3
+# [==============================] - loss: 0.0231 - val_loss: 0.0194
+# Epoch 3/3
+# [==============================] - loss: 0.0210 - val_loss: 0.0185
+# Saving the model ....
+
+# # Model saved
+# dict_keys(['val_loss', 'loss'])
+# [0.032302197645465083, 0.023199605755640847, 0.0210451334593958193] #Loss
+# [0.024738030490593414, 0.01940256927326544, 0.01856277178770334] #Validation_loss
 
