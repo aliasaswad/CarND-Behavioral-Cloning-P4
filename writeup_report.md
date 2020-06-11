@@ -98,8 +98,8 @@ Here is an example of an input image and its cropped version after passing throu
 
 |<img src="./readme_writeup/original_image_from_sim.jpg" width="400" height="300" align="center"/> <img src="./readme_writeup/cropped_image.jpg" width="400" height="200" align="center"/> 
 |:--:| 
-|      *Original Image from Simulator          Cropped Image after passing through a Cropping2D Layer*|
-
+|*Original Image from Simulator ____________________Cropped Image after passing through a Cropping2D Layer*|
+ 
 
 
     
