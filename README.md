@@ -82,7 +82,7 @@ python drive.py model.h5 track_1
 The fourth argument, `track_1`, is the directory in which to save the images seen by the agent. If the directory already exists, it'll be overwritten.
 
 ```sh
-ls run1
+ls track_1
 
 [2020-01-09 15:09:20 EST]  12KiB 2020_06_09_20_09_30_336.jpg
 [2020-01-09 15:09:20 EST]  12KiB 2020_06_09_20_09_30_351.jpg
