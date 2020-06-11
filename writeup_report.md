@@ -112,14 +112,19 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 The final model architecture (`model.py` [lines 72-84](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L72-L84)) consisted of normalization layer followed by a convolution neural network.
 I used [Keras](https://keras.io/) to visualize my network. Keras provides a function to create a plot of the network neural network graph that can make more complex models easier to understand. The [`plot_model()`](https://www.tensorflow.org/api_docs/python/tf/keras/utils/plot_model) function in Keras will create a plot of your network.
-The code I used to visualize the model represented by the [`visualizer.ipynb`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/visualizer.ipynb) file.
+The code I used to visualize the model could be found in the [`visualizer.ipynb`](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/visualizer.ipynb) file.
+
 ```python
 plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=True)
 ```
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+Here is a visualization of the final model architecture:
 
-![alt text][image1]
+
+|<img src="./readme_writeup/model_plot.jpg" width="450" height="300" align="center"/> 
+|:--:| 
+|*Final Model Visualization*|
+
 
 #### 3. Creation of the Training Set & Training Process
 
