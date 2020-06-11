@@ -121,7 +121,7 @@ plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=T
 Here is a visualization of the final model architecture:
 
 
-|<img src="./readme_writeup/model_plot.png" width="500" height="800" align="center"/> 
+|<img src="./readme_writeup/model_plot.png" width="500" height="900" align="center"/> 
 |:--:| 
 |*Final Model Visualization*|
 
