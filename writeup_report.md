@@ -101,19 +101,10 @@ Here is an example of an input image and its cropped version after passing throu
 |*Original Image from Simulator ____________________Cropped Image after passing through a Cropping2D Layer*|
  
 
+My first step was to use a convolution neural network model similar to the [LeNet](http://yann.lecun.com/exdb/lenet/) model. In order to gauge how well the model was working, I splitted my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. I thought this model might be appropriate solution but the model was unable to drive the car smoothly on the road and specially when I increased the speed (`drive.py` [line 47](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/drive.py#L47)).  
 
-    
-followed cropping layer, five convolution neural network
+The second step was to use a more powerfull network architecture model. I used [nVidia](https://devblogs.nvidia.com/deep-learning-self-driving-cars/) model. I modified the model by adding extra new layer at the end to have a single output as it was required. The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track. To improve the driving behavior in these cases, I augmented the data by adding the same image flipped with a negative angle (`model.py` [lines 68](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L68)). I also used the left and right camera images as a correction factor on the steering angle to help the car stay in the center of the road (`model.py` [line 14-25](https://github.com/aliasaswad/CarND-Behavioral-Cloning-P4/blob/master/model.py#L14-L25)). 
 
-My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
-
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
-
-To combat the overfitting, I modified the model so that ...
-
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
