@@ -134,7 +134,7 @@ I used this training data for training the model with three epochs. The validati
 
 The following plot shows the error loss for the trained model:
 
-|<img src="./readme_writeup/loss_plot.png" width="500" height="1100" align="center"/> 
+|<img src="./readme_writeup/loss_plot.png" width="500" height="400" align="center"/> 
 |:--:| 
 |*Trained Model Loss Error*|
 
